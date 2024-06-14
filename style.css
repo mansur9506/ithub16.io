@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/public/img/хаб.PNG') no-repeat center center fixed;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: tan;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+    border-radius: 60%;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.company-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-left: 20px; /* Добавлено расстояние между элементами */
+}
+
+.login-btn:hover {
+    background-color: #1C86EE;
+    transform: scale(1.1);
+}
+
+.laptop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.laptop-grid .laptop-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    width: 200px;
+}
+
+.laptop-grid .laptop-card img {
+    width: 100%;
+    height: auto;
+}
+
+.laptop-grid .laptop-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    cursor: pointer;
+}
+
+.laptop-grid .laptop-card button:hover {
+    background-color: #ffbf00;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+.form-container input[type="number"],
+.form-container input[type="datetime-local"],
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #ffbf00;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: tan;
+    color: #fff;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer img {
+    width: 30px;
+    height: auto;
+}

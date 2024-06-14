@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/public/img/хаб.PNG') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: tan;
+    color: #fff;
+}
+
+.auth-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin: 10px 0;
+}
+
+.form-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #ffbf00;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}

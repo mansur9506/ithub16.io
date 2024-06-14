@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование ноутбука</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Бронирование ноутбука Lenovo Legion 6</h1>
+    </header>
+    <main>
+        <section class="booking-form">
+            <div class="form-container">
+                <h2>Забронировать ноутбук</h2>
+                <form id="booking-form">
+                    <label>Начало аренды:
+                        <input type="datetime-local" id="start_time" name="start_time" required>
+                    </label>
+                    <label>Конец аренды:
+                        <input type="datetime-local" id="end_time" name="end_time" required>
+                    </label>
+                    <button type="submit">Забронировать ноутбук</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bookingForm = document.getElementById('booking-form');
+
+        bookingForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const token = localStorage.getItem('auth-token');
+            if (!token) {
+                alert('Вы должны войти в систему, чтобы забронировать ноутбук.');
+                window.location.href = '/auth.html';
+                return;
+            }
+
+            const formData = new FormData(bookingForm);
+            const bookingData = {
+                start_time: formData.get('start_time'),
+                end_time: formData.get('end_time')
+            };
+
+            const response = await fetch('/book', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': token
+                },
+                body: JSON.stringify(bookingData)
+            });
+
+            if (response.ok) {
+                alert('Бронирование успешно!');
+            } else {
+                const error = await response.text();
+                alert('Ошибка: ' + error);
+            }
+        });
+    });
+</script>
+</html>
